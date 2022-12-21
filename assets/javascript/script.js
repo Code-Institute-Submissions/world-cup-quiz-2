@@ -118,6 +118,8 @@ displayQuestion = () => {
     const indexQuestions = Math.floor(Math.random() * remainingQuestions.length)
     currentQuestion = remainingQuestions(indexQuestions)
     question.innerText = currentQuestion.question
+
+    answerOptions.forEach(option =>)
 }
 
 
