@@ -1,7 +1,7 @@
 const question = document.querySelector('#question');
 const answerOptions = Array.from(document.querySelector('.answer-option-text'));
 const statusText = document.querySelector('#statusText');
-const pointsText = document.querySelector('#question')
+const pointsText = document.querySelector('#points')
 const statusBarFull = document.querySelector('#statusBarFull');
 
 let currentQuestion ={}
@@ -96,4 +96,13 @@ let questions = [
 
 const POINT_PER_QUESTION = 1
 const TOTAL_QUESTIONS = 10
+const MAX_SCORE = 10
+
+startGame = () => {
+    points = 0;
+    questionCount = 0;
+    remainingQuestions = [...questions];
+    displayQuestion()
+}
+
 
