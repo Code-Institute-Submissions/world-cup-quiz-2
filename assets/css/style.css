@@ -15,9 +15,49 @@ body {
     color: white;
 }
 
+/* Hero image */
+
 #hero-image {
     width: 90%;
     height: auto;
     margin: 4rem;
     border-radius: 5%;
+}
+
+/* Quiz container */
+
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.quiz-container > * {
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.center-justify {
+    justify-content: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
