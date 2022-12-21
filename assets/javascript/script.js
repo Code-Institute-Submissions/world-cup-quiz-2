@@ -142,8 +142,10 @@ answerOptions.forEach(option => {
 
         if (answerFeedback === 'right-answer') {
             incrementPoints(POINT_PER_QUESTION)
+            optionSelected.innerHTML += `<i class="fa-solid fa-check"></i>`
         } else {
             optionSelected.style.color = 'white'
+            optionSelected.innerHTML += `<i class="fa-solid fa-xmark"></i>`
         }
 
         
@@ -155,7 +157,7 @@ answerOptions.forEach(option => {
             optionSelected.style.color = '#7F1431'
             displayQuestion()
 
-        }, 800)
+        }, 1200)
 
 
     })
