@@ -154,6 +154,7 @@ h3 {
     padding: 1rem;
     color: #7F1431;
     margin: 0;
+    width: 100%;
 }
 
 .right-answer {
@@ -198,5 +199,13 @@ h3 {
     height: 100%;
     background: gold;
     width: 0%;
+}
+
+i {
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: inline-block;
+    float: right;
+
 }
 
