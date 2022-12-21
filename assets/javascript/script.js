@@ -135,19 +135,24 @@ answerOptions.forEach(option => {
         if(!allowAnswers) return
 
         allowAnswers = false
-        const optionSelected = e.target
-        const answerSelected = optionSelected.dataset['number']
+        const optionSelected = e.currentTarget
+        const validateOptionSelected = optionSelected.dataset['number']
 
-        let optionClass = answerSelected == currentQuestion.answer ? 'right-answer' : 'wrong-answer'
+        let answerFeedback = validateOptionSelected == currentQuestion.answer ? 'right-answer' : 'wrong-answer'
 
-        if (optionClass === 'right-answer') {
+        if (answerFeedback === 'right-answer') {
             incrementPoints(POINT_PER_QUESTION)
+        } else {
+            optionSelected.style.color = 'white'
         }
 
-        optionSelected.parentElement.classList.add(optionClass)
+        
+        optionSelected.parentElement.classList.add(answerFeedback)
+        
 
         setTimeout(() => {
-            optionSelected.parentElement.classList.remove(optionClass)
+            optionSelected.parentElement.classList.remove(answerFeedback)
+            optionSelected.style.color = '#7F1431'
             displayQuestion()
 
         }, 800)
