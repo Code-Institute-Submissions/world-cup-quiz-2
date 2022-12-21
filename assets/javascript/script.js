@@ -94,9 +94,9 @@ let questions = [
     
 ]
 
-const POINT_PER_QUESTION = 1
+const POINT_PER_QUESTION = 10
 const TOTAL_QUESTIONS = 10
-const MAX_SCORE = 10
+const MAX_SCORE = 100
 
 beginQuiz = () => {
     points = 0;
