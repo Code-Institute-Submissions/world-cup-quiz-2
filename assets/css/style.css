@@ -153,3 +153,11 @@ h3 {
     padding: 1.5rem;
     color: #7F1431;
 }
+
+.right-answer {
+    background: rgb(33, 216, 33)
+}
+
+.wrong-answer {
+    background: rgb(245, 26, 26)
+}
