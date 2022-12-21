@@ -161,3 +161,34 @@ h3 {
 .wrong-answer {
     background: rgb(245, 26, 26)
 }
+
+/* Styling for status overview */
+
+#status {
+    display: flex;
+    justify-content: space-between
+}
+
+.status-prefix {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.status-main {
+    text-align: center;
+}
+
+#statusBar {
+    border: 0.1rem solid gold;
+    width: 12rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+#statusBarFull {
+    height: 100%;
+    background: gold;
+    width: 0%;
+}
