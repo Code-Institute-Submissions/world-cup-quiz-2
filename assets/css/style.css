@@ -24,7 +24,7 @@ body {
     border-radius: 5%;
 }
 
-/* Quiz container */
+/* Quiz containers */
 
 .quiz-container {
     display: flex;
@@ -40,7 +40,7 @@ body {
     width: 100%;
 }
 
-.flex-column {
+.column-flex {
     display: flex;
     flex-direction: column;
 }
@@ -60,4 +60,33 @@ body {
 
 .hidden {
     display: none;
+}
+
+
+/* Button */
+
+.button {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid gold;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #7F1431;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem gold;
+    transform: translateX(0.1rem);
+    transition: transform 150ms;
+}
+
+.button[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
