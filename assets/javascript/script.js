@@ -1,5 +1,5 @@
 const question = document.querySelector('#question');
-const answerOptions = Array.from(document.querySelector('.answer-option-text'));
+const answerOptions = Array.from(document.querySelectorAll('.answer-option-text'));
 const statusText = document.querySelector('#statusText');
 const pointsText = document.querySelector('#points')
 const statusBarFull = document.querySelector('#statusBarFull');
@@ -17,7 +17,7 @@ let questions = [
         option2: 'France',
         option3: 'Argentina',
         option4: 'Republic of Ireland',
-        answer: 'Argentina',
+        answer: 3,
     },
     {
         question: 'Who scored the most goals at this World Cup?',
@@ -25,7 +25,7 @@ let questions = [
         option2: 'Lionel Messi',
         option3: 'Cristiano Ronaldo',
         option4: 'Kylian Mbappé',
-        answer: 'Kylian Mbappé',
+        answer: 4,
     },
     {
         question: 'How many teams qualified to play at the World Cup?',
@@ -33,7 +33,7 @@ let questions = [
         option2: '40',
         option3: '32',
         option4: '56',
-        answer: '32',
+        answer: 3,
     },
     {
         question: 'How many matches were played in total at the World Cup?',
@@ -41,15 +41,15 @@ let questions = [
         option2: '72',
         option3: '64',
         option4: '48',
-        answer: '64',
+        answer: 3,
     },
     {
         question: 'What was the average goals per game?',
         option1: '3.15',
-        option2: '2.69',
+        option2: '2.6875',
         option3: '2',
         option4: '1.83',
-        answer: '2.6875',
+        answer: 2,
     },
     {
         question: 'How many goals in total were scored at the World Cup?',
@@ -57,7 +57,7 @@ let questions = [
         option2: '203',
         option3: '172',
         option4: '85',
-        answer: '172',
+        answer: 3,
     },
     {
         question: 'At 40 years, 63 days, Who was the oldest player at the World Cup?',
@@ -65,7 +65,7 @@ let questions = [
         option2: 'Cristiano Ronaldo (Portugal)',
         option3: 'Harry Kane (England)',
         option4: 'Paul McGrath (Rep. of Ireland)',
-        answer: 'Alfredo Talavera (Mexico)',
+        answer: 1,
     },
     {
         question: 'At 18 years, 3 days, who was the youngest player at the World Cup?',
@@ -73,15 +73,15 @@ let questions = [
         option2: 'Kylian Mbappé (France)',
         option3: 'Robbie Keane (Rep. of Ireland)',
         option4: 'Mohammed Muntari (Qatar)',
-        answer: 'Youssoufa Moukoko (Germany)',
+        answer: 1,
     },
     {
-        question: 'Which team claimed 3rd place at the World Cup?',
+        question: 'Which country claimed 3rd place at the World Cup?',
         option1: 'Croatia',
         option2: 'Germany',
         option3: 'Brazil',
         option4: 'France',
-        answer: 'Croatia',
+        answer: 1,
     },
     {
         question: 'Which player received the most Man of the Match awards?',
@@ -89,7 +89,7 @@ let questions = [
         option2: 'Lionel Messi (Argentina)',
         option3: 'Cristiano Ronaldo (Portugal)',
         option4: 'Thiago Silva (Brazil)',
-        answer: 'Lionel Messi (Argentina)',
+        answer: 2,
     },
     
 ]
@@ -107,8 +107,9 @@ beginQuiz = () => {
 
 displayQuestion = () => {
     if(remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
-        localSave.setItems('lastScore', points)
-        return window.location.assign('./quizcomplete.html')
+        localStorage.setItems('lastScore', points)
+
+        return window.location.assign('/quizcomplete.html')
     }
 
     questionCount++
@@ -116,7 +117,7 @@ displayQuestion = () => {
     statusBarFull.style.width = `${(questionCount/TOTAL_QUESTIONS) * 100}%`
 
     const indexQuestions = Math.floor(Math.random() * remainingQuestions.length)
-    currentQuestion = remainingQuestions(indexQuestions)
+    currentQuestion = remainingQuestions[indexQuestions]
     question.innerText = currentQuestion.question
 
     answerOptions.forEach(option => {
@@ -129,4 +130,35 @@ displayQuestion = () => {
     allowAnswers = true
 }
 
+answerOptions.forEach(option => {
+    option.addEventListener('click', e => {
+        if(!allowAnswers) return
 
+        allowAnswers = false
+        const optionSelected = e.target
+        const answerSelected = optionSelected.dataset['number']
+
+        let optionClass = answerSelected == currentQuestion.answer ? 'right-answer' : 'wrong-answer'
+
+        if (optionClass === 'right-answer') {
+            incrementPoints(POINT_PER_QUESTION)
+        }
+
+        optionSelected.parentElement.classList.add(optionClass)
+
+        setTimeout(() => {
+            optionSelected.parentElement.classList.remove(optionClass)
+            displayQuestion()
+
+        }, 1000)
+
+
+    })
+})
+
+incrementPoints = num => {
+    points +=num
+    pointsText.innerText = points
+}
+
+beginQuiz()
