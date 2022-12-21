@@ -14,3 +14,10 @@ body {
     padding: 0;
     color: white;
 }
+
+#hero-image {
+    width: 90%;
+    height: auto;
+    margin: 4rem;
+    border-radius: 5%;
+}
