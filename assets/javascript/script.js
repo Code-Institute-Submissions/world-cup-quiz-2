@@ -150,7 +150,7 @@ answerOptions.forEach(option => {
             optionSelected.parentElement.classList.remove(optionClass)
             displayQuestion()
 
-        }, 1000)
+        }, 800)
 
 
     })
