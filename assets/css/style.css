@@ -15,12 +15,42 @@ body {
     color: white;
 }
 
+/* Headings */
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 0.2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+h1 > span {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
 /* Hero image */
 
 #hero-image {
-    width: 90%;
+    width: 95%;
     height: auto;
-    margin: 4rem;
+    margin: .2rem;
     border-radius: 5%;
 }
 
@@ -66,9 +96,9 @@ body {
 /* Button */
 
 .button {
-    font-size: 1.8rem;
-    padding: 1rem 0;
-    width: 20rem;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    width: 15rem;
     text-align: center;
     border: 0.1rem solid gold;
     margin-bottom: 1rem;
