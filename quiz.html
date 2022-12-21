@@ -12,9 +12,11 @@
 </head>
 
 <body>
+    <!-- Containter for the quiz -->
     <section class="quiz-container">
         <div id="quiz-page" class="column-flex center-flex">
-            <div id="status">
+             <!-- Display for status, question progression-->
+            <div id="status"></div>
                 <div class="status-item">
                     <p id="statusText" class="status-prefix">
                         Question
@@ -23,6 +25,33 @@
                         <div id="statusBarFull"></div>
                     </div>
                 </div>
+                <!-- Display for points scored -->
+                <div class="status-item">
+                    <p class="status-prefix">
+                        Points
+                    </p>
+                    <h1 class="status-main" id="points">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <!-- Display for questions and Answer options-->
+            <div id="question">What is Question 1?</div>
+            <div class="answer-option-container">
+                <p class="answer-option">A</p>
+                <p class="answer-option-text" data-number="1">Option</p>
+            </div>
+            <div class="answer-option-container">
+                <p class="answer-option">B</p>
+                <p class="answer-option-text" data-number="2">Option</p>
+            </div>
+            <div class="answer-option-container">
+                <p class="answer-option">C</p>
+                <p class="answer-option-text" data-number="3">Option</p>
+            </div>
+                        <div class="answer-option-container">
+                <p class="answer-option">D</p>
+                <p class="answer-option-text" data-number="4">Option</p>
             </div>
         </div>
     </section>
