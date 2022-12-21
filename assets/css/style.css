@@ -203,9 +203,9 @@ h3 {
 
 i {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 800;
     display: inline-block;
     float: right;
-
+    vertical-align: sub;
 }
 
