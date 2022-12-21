@@ -119,7 +119,14 @@ displayQuestion = () => {
     currentQuestion = remainingQuestions(indexQuestions)
     question.innerText = currentQuestion.question
 
-    answerOptions.forEach(option =>)
+    answerOptions.forEach(option => {
+        const number = option.dataset['number']
+        option.innerText = currentQuestion['option' + number]
+    })
+
+    remainingQuestions.splice(indexQuestions, 1)
+
+    allowAnswers = true
 }
 
 
