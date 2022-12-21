@@ -98,11 +98,26 @@ const POINT_PER_QUESTION = 1
 const TOTAL_QUESTIONS = 10
 const MAX_SCORE = 10
 
-startGame = () => {
+beginQuiz = () => {
     points = 0;
     questionCount = 0;
     remainingQuestions = [...questions];
     displayQuestion()
+}
+
+displayQuestion = () => {
+    if(remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
+        localSave.setItems('lastScore', points)
+        return window.location.assign('./quizcomplete.html')
+    }
+
+    questionCount++
+    statusText.innerText = `Question ${questionCount} of ${TOTAL_QUESTIONS}`
+    statusBarFull.style.width = `${(questionCount/TOTAL_QUESTIONS) * 100}%`
+
+    const indexQuestions = Math.floor(Math.random() * remainingQuestions.length)
+    currentQuestion = remainingQuestions(indexQuestions)
+    question.innerText = currentQuestion.question
 }
 
 
