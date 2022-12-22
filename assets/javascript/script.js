@@ -107,7 +107,7 @@ let beginQuiz = () => {
 
 let displayQuestion = () => {
     if(remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
-        localStorage.setItems('lastScore', points);
+        localStorage.setItem('lastScore', points);
 
         return window.location.assign('/quizcomplete.html');
     }
@@ -153,6 +153,7 @@ answerOptions.forEach(option => {
         
 
         setTimeout(() => {
+            optionSelected.parentElement.classList.remove(answerFeedback);
             optionSelected.parentElement.classList.remove(answerFeedback);
             optionSelected.style.color = '#7F1431';
             displayQuestion();
