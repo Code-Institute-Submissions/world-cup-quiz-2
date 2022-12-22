@@ -52,6 +52,7 @@ h3 {
     height: auto;
     margin-top: 1.8rem;
     border-radius: 5%;
+    max-width: 50rem;
 }
 
 /* Quiz containers */
