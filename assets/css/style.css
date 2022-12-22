@@ -135,8 +135,9 @@ h3 {
     font-size: 1rem;
     border: 0.1rem solid gold;
     background-color: white;
-    width: 15rem;
+    width: 100%;
     height: 3rem;
+    max-width: 18rem;
 }
 
 .answer-option-container:hover {
