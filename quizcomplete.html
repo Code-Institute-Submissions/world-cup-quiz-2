@@ -12,8 +12,16 @@
 
 <body>
     <section class="quiz-container">
-
-
+        <div id="quiz-complete" class="column-flex center-flex">
+            <h1 id="lastScore">0</h1>
+            <form class="quiz-complete-form">
+                <h2 id="quiz-complete-text">Add yourself to the Hall of Fame!</h2>
+                <input id="inductee" placeholder="Enter Name Here" type="text" name="username">
+                <button type="submit" class="button" id="saveButton" onClick="saveScore(event)" disabled>Save Score</button>
+            </form>
+            <a href="/quiz.html" class="button">Restart Quiz</a>
+            <a href="/index.html" class="button">Start Screen</a>
+        </div>
     </section>
     <script src="/assets/javascript/script.js"></script>
 </body>
