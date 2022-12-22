@@ -98,14 +98,14 @@ const POINT_PER_QUESTION = 10;
 const TOTAL_QUESTIONS = 10;
 const MAX_SCORE = 100;
 
-beginQuiz = () => {
+let beginQuiz = () => {
     points = 0;
     questionCount = 0;
     remainingQuestions = [...questions];
     displayQuestion();
 };
 
-displayQuestion = () => {
+let displayQuestion = () => {
     if(remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
         localStorage.setItems('lastScore', points);
 
@@ -163,7 +163,7 @@ answerOptions.forEach(option => {
     });
 });
 
-incrementPoints = num => {
+let incrementPoints = num => {
     points +=num;
     pointsText.innerText = points;
 };
