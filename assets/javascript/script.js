@@ -1,14 +1,14 @@
 const question = document.querySelector('#question');
 const answerOptions = Array.from(document.querySelectorAll('.answer-option-text'));
 const statusText = document.querySelector('#statusText');
-const pointsText = document.querySelector('#points')
+const pointsText = document.querySelector('#points');
 const statusBarFull = document.querySelector('#statusBarFull');
 
-let currentQuestion ={}
-let allowAnswers = true
-let points = 0
-let questionCount = 0
-let remainingQuestions = []
+let currentQuestion ={};
+let allowAnswers = true;
+let points = 0;
+let questionCount = 0;
+let remainingQuestions = [];
 
 let questions = [
     {
@@ -21,7 +21,7 @@ let questions = [
     },
     {
         question: 'Who scored the most goals at this World Cup?',
-        option1: 'Harry Kane',
+        option1: 'Niall Quinn',
         option2: 'Lionel Messi',
         option3: 'Cristiano Ronaldo',
         option4: 'Kylian Mbappé',
@@ -70,7 +70,7 @@ let questions = [
     {
         question: 'At 18 years, 3 days, who was the youngest player at the World Cup?',
         option1: 'Youssoufa Moukoko',
-        option2: 'Kylian Mbappé',
+        option2: 'Marcus Rashford',
         option3: 'Robbie Keane',
         option4: 'Mohammed Muntari',
         answer: 1,
@@ -85,87 +85,87 @@ let questions = [
     },
     {
         question: 'Which player received the most Man of the Match awards?',
-        option1: 'Kylian Mbappé',
+        option1: 'Roy Keane',
         option2: 'Lionel Messi',
         option3: 'Cristiano Ronaldo',
         option4: 'Thiago Silva',
         answer: 2,
     },
     
-]
+];
 
-const POINT_PER_QUESTION = 10
-const TOTAL_QUESTIONS = 10
-const MAX_SCORE = 100
+const POINT_PER_QUESTION = 10;
+const TOTAL_QUESTIONS = 10;
+const MAX_SCORE = 100;
 
 beginQuiz = () => {
     points = 0;
     questionCount = 0;
     remainingQuestions = [...questions];
-    displayQuestion()
-}
+    displayQuestion();
+};
 
 displayQuestion = () => {
     if(remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
-        localStorage.setItems('lastScore', points)
+        localStorage.setItems('lastScore', points);
 
-        return window.location.assign('/quizcomplete.html')
+        return window.location.assign('/quizcomplete.html');
     }
 
-    questionCount++
-    statusText.innerText = `Question ${questionCount} of ${TOTAL_QUESTIONS}`
-    statusBarFull.style.width = `${(questionCount/TOTAL_QUESTIONS) * 100}%`
+    questionCount++;
+    statusText.innerText = `Question ${questionCount} of ${TOTAL_QUESTIONS}`;
+    statusBarFull.style.width = `${(questionCount/TOTAL_QUESTIONS) * 100}%`;
 
-    const indexQuestions = Math.floor(Math.random() * remainingQuestions.length)
-    currentQuestion = remainingQuestions[indexQuestions]
-    question.innerText = currentQuestion.question
+    const indexQuestions = Math.floor(Math.random() * remainingQuestions.length);
+    currentQuestion = remainingQuestions[indexQuestions];
+    question.innerText = currentQuestion.question;
 
     answerOptions.forEach(option => {
-        const number = option.dataset['number']
-        option.innerText = currentQuestion['option' + number]
-    })
+        const number = option.dataset['number'];
+        option.innerText = currentQuestion['option' + number];
+    });
 
-    remainingQuestions.splice(indexQuestions, 1)
+    remainingQuestions.splice(indexQuestions, 1);
 
-    allowAnswers = true
-}
+    allowAnswers = true;
+};
 
 answerOptions.forEach(option => {
     option.addEventListener('click', e => {
-        if(!allowAnswers) return
+        if(!allowAnswers) return;
 
-        allowAnswers = false
-        const optionSelected = e.currentTarget
-        const validateOptionSelected = optionSelected.dataset['number']
+        allowAnswers = false;
+        const optionSelected = e.currentTarget;
+        const validateOptionSelected = optionSelected.dataset['number'];
 
-        let answerFeedback = validateOptionSelected == currentQuestion.answer ? 'right-answer' : 'wrong-answer'
+        let answerFeedback = validateOptionSelected == currentQuestion.answer ? 'right-answer' : 'wrong-answer';
 
         if (answerFeedback === 'right-answer') {
-            incrementPoints(POINT_PER_QUESTION)
-            optionSelected.innerHTML += `<i class="fa-solid fa-check"></i>`
+            incrementPoints(POINT_PER_QUESTION);
+            optionSelected.innerHTML += `<i class="fa-solid fa-check"></i>`;
         } else {
-            optionSelected.style.color = 'white'
-            optionSelected.innerHTML += `<i class="fa-solid fa-xmark"></i>`
+            optionSelected.style.color = 'white';
+            optionSelected.innerHTML += `<i class="fa-solid fa-xmark"></i>`;
         }
 
         
-        optionSelected.parentElement.classList.add(answerFeedback)
+        optionSelected.parentElement.classList.add(answerFeedback);
         
 
         setTimeout(() => {
-            optionSelected.parentElement.classList.remove(answerFeedback)
-            optionSelected.style.color = '#7F1431'
-            displayQuestion()
+            optionSelected.parentElement.classList.remove(answerFeedback);
+            optionSelected.style.color = '#7F1431';
+            displayQuestion();
 
-        }, 1100)
+        }, 1100);
 
 
-    })
-})
+    });
+});
 
 incrementPoints = num => {
-    points +=num
-    pointsText.innerText = points
-}
+    points +=num;
+    pointsText.innerText = points;
+};
 
-beginQuiz()
+beginQuiz();
