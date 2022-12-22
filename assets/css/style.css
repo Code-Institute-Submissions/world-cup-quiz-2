@@ -98,6 +98,7 @@ h3 {
 
 .button {
     font-size: 1.3rem;
+    font-weight: 700;
     padding: .5rem 0;
     width: 12rem;
     text-align: center;
@@ -121,6 +122,7 @@ h3 {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+    background-color: grey;
 }
 
 
@@ -214,3 +216,46 @@ i {
 #css-validation {
     width: 3rem;
 }
+
+/* Quiz Complete Page */
+
+.quiz-complete-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 65%;
+    padding: .5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0.4rem 1.4rem gold;
+}
+
+input::placeholder {
+    color: #7F1431;
+    text-align: center;
+}
+
+/* #username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: gold;
+} */
+
+#quiz-complete-text {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+}
+
+/* #saveButton {
+    border: none
+} */
+
