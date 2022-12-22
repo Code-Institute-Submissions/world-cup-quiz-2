@@ -157,7 +157,7 @@ answerOptions.forEach(option => {
             optionSelected.style.color = '#7F1431'
             displayQuestion()
 
-        }, 1200)
+        }, 1100)
 
 
     })

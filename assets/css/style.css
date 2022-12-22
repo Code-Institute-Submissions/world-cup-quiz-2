@@ -50,7 +50,7 @@ h3 {
 #hero-image {
     width: 90%;
     height: auto;
-    margin: 1rem;
+    margin-top: 1.8rem;
     border-radius: 5%;
 }
 
@@ -151,10 +151,12 @@ h3 {
 }
 
 .answer-option-text {
+    display: inline-block;
     padding: 1rem;
     color: #7F1431;
     margin: 0;
     width: 100%;
+    vertical-align: middle;
 }
 
 .right-answer {
@@ -206,6 +208,9 @@ i {
     font-weight: 800;
     display: inline-block;
     float: right;
-    vertical-align: sub;
 }
 
+#css-validation {
+    width: 3rem;
+    
+}
