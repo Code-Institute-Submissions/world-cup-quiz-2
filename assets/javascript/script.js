@@ -121,7 +121,7 @@ let displayQuestion = () => {
     question.innerText = currentQuestion.question;
 
     answerOptions.forEach(option => {
-        const number = option.dataset['number'];
+        const number = option.dataset.number;
         option.innerText = currentQuestion['option' + number];
     });
 
@@ -136,7 +136,7 @@ answerOptions.forEach(option => {
 
         allowAnswers = false;
         const optionSelected = e.currentTarget;
-        const validateOptionSelected = optionSelected.dataset['number'];
+        const validateOptionSelected = optionSelected.dataset.number;
 
         let answerFeedback = validateOptionSelected == currentQuestion.answer ? 'right-answer' : 'wrong-answer';
 
