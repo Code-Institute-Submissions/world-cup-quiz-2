@@ -111,6 +111,11 @@ The site was deployed from Github pages by accessing the 'Settings' tab, then pr
 The live site can be found here [here]https://dannygilligan.github.io/world-cup-quiz/ 
 
 
+# Bugs
+
+The 'Hall of Fame' feature that would allow users to save their scores was not functioning correctly at time of deployment.
+
+
 # Credits
 
 Extensive use was made of tutorials, walkthroughs and articles and Google searches throughout the project! The material below was most useful:
