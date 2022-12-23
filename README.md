@@ -116,7 +116,9 @@ The live site can be found here [here]https://dannygilligan.github.io/world-cup-
 Extensive use was made of tutorials, walkthroughs and articles and Google searches throughout the project! The material below was most useful:
 
 James Q Quick (YouTube Tutorial) [here] https://www.youtube.com/watch?v=zZdQGs62cR8&t=267s
+
 Brian Design (YouTube Tutorial) [here] https://www.youtube.com/watch?v=f4fB9Xg2JEY
+
 Codingninjas (Article) [here] https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
 
 
