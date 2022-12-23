@@ -126,6 +126,8 @@ Brian Design (YouTube Tutorial) [here] https://www.youtube.com/watch?v=f4fB9Xg2J
 
 Codingninjas (Article) [here] https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
 
+The answers to the questions were obtained from multiple google searches, a useful site for stats (Olympics.com) can be found here [here] https://olympics.com/en/news/fifa-world-cup-2022-records-and-stats
+
 
 
 
