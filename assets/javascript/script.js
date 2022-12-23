@@ -4,14 +4,13 @@ const statusText = document.querySelector('#statusText');
 const pointsText = document.querySelector('#points');
 const statusBarFull = document.querySelector('#statusBarFull');
 
-let currentQuestion ={};
+let currentQuestion = {};
 let allowAnswers = true;
 let points = 0;
 let questionCount = 0;
 let remainingQuestions = [];
 
-let questions = [
-    {
+let questions = [{
         question: 'Which country won the 2022 World Cup?',
         option1: 'Brazil',
         option2: 'France',
@@ -91,7 +90,7 @@ let questions = [
         option4: 'Thiago Silva',
         answer: 2,
     },
-    
+
 ];
 
 const POINT_PER_QUESTION = 10;
@@ -106,7 +105,7 @@ let beginQuiz = () => {
 };
 
 let displayQuestion = () => {
-    if(remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
+    if (remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
         localStorage.setItem('lastScore', points);
 
         return window.location.assign('/quizcomplete.html');
@@ -132,7 +131,7 @@ let displayQuestion = () => {
 
 answerOptions.forEach(option => {
     option.addEventListener('click', e => {
-        if(!allowAnswers) return;
+        if (!allowAnswers) return;
 
         allowAnswers = false;
         const optionSelected = e.currentTarget;
@@ -148,9 +147,9 @@ answerOptions.forEach(option => {
             optionSelected.innerHTML += `<i class="fa-solid fa-xmark"></i>`;
         }
 
-        
+
         optionSelected.parentElement.classList.add(answerFeedback);
-        
+
 
         setTimeout(() => {
             optionSelected.parentElement.classList.remove(answerFeedback);
@@ -165,7 +164,7 @@ answerOptions.forEach(option => {
 });
 
 let incrementPoints = num => {
-    points +=num;
+    points += num;
     pointsText.innerText = points;
 };
 
