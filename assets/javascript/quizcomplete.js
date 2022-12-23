@@ -7,33 +7,33 @@ const saveScoreButton = document.querySelector('#saveButton');
 const finalScore = document.querySelector('#finalScore');
 const recentScore = localStorage.getItem('recentScore');
 
-const hallOfFameScore = JSON.parse(localStorage.getItem('hallOfFame')) || [];
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 const MAX_HALL_OF_FAME_ENTRIES = 10;
 
 finalScore.innerText = recentScore;
 
 hofUsername.addEventListener('keyup', () => {
-    saveButton.disabled = !hofUsername.value
+    saveButton.disabled = !hofUsername.value;
 });
 
 saveScore = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const score = {
         score: recentScore,
         name: hofUsername.value 
-    }
+    };
 
-    highScores.push(score)
+    highScores.push(score);
 
     highScores.sort((a,b) => {
-        return b.score - a.highScores
-    })
+        return b.score - a.score;
+    });
 
-    highScores.splice(10)
+   highScores.splice(10);
 
-    localStorage.setItem('highScores', JSON.stringify(highScores))
-    window.location.assign('/index.html')
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    window.location.assign('/index.html');
 
-}
+};

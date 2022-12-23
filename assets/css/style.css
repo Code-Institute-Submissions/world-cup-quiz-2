@@ -278,7 +278,7 @@ input::placeholder {
 
 /* Hall of Fame Styling */
 
-#hallOfFameList {
+#highScoresList {
     list-style: none;
     margin-bottom: 2rem;
 }
