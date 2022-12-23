@@ -10,6 +10,9 @@ let points = 0;
 let questionCount = 0;
 let remainingQuestions = [];
 
+
+// Array containing questions to be displayed to user and related answers 
+
 let questions = [{
         question: 'Which country won the 2022 World Cup?',
         option1: 'Brazil',
@@ -96,6 +99,8 @@ let questions = [{
 const POINT_PER_QUESTION = 10;
 const TOTAL_QUESTIONS = 10;
 
+
+/* Quiz mechanics, the code was adapted from tutorials and walkthroughsavailable on YouTube such as 'Brian Design' https://www.youtube.com/watch?v=f4fB9Xg2JEY and 'James Q Quick' https://www.youtube.com/watch?v=zZdQGs62cR8&t=150s */
 
 let beginQuiz = () => {
     points = 0;
