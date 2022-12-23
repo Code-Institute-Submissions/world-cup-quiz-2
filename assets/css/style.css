@@ -178,6 +178,16 @@ h3 {
     text-align: center;
 }
 
+#display-score {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    text-align: center;
+    color: gold;
+    margin: 0;
+    padding: 0;
+}
+
 /* Styling for status overview */
 
 #status {
@@ -257,7 +267,7 @@ input::placeholder {
 #quiz-complete-text {
     margin-top: .5rem;
     margin-bottom: 1.5rem;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: white;
     text-align: center;
 }
@@ -266,5 +276,15 @@ input::placeholder {
     border: none
 } */
 
+/* Hall of Fame Styling */
 
+#hallOfFameList {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.high-score {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
 

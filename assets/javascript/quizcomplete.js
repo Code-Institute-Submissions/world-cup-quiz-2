@@ -2,10 +2,10 @@
 // This code below was adapted from the Tutorial created by 'Brian Design' on Youtube, https://www.youtube.com/watch?v=f4fB9Xg2JEY
 
 
-const hofUsername = document.querySelector(#hofUsername);
-const saveScoreButton = document.querySelector(#saveButton);
-const finalScore = document.querySelector(#finalScore);
-const recentScore = localStorage.getItem(recentScore);
+const hofUsername = document.querySelector('#hofUsername');
+const saveScoreButton = document.querySelector('#saveButton');
+const finalScore = document.querySelector('#finalScore');
+const recentScore = localStorage.getItem('recentScore');
 
 const hallOfFameScore = JSON.parse(localStorage.getItem('hallOfFame')) || [];
 
@@ -13,11 +13,11 @@ const MAX_HALL_OF_FAME_ENTRIES = 10;
 
 finalScore.innerText = recentScore;
 
-hofUsername.addEventListener('keyuo', () => {
+hofUsername.addEventListener('keyup', () => {
     saveButton.disabled = !hofUsername.value
 });
 
-saveHighScore = (e) => {
+saveScore = (e) => {
     e.preventDefault()
 
     const score = {
@@ -28,7 +28,7 @@ saveHighScore = (e) => {
     highScores.push(score)
 
     highScores.sort((a,b) => {
-        return.b.score - a.highScores
+        return b.score - a.highScores
     })
 
     highScores.splice(10)

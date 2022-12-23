@@ -106,7 +106,7 @@ let beginQuiz = () => {
 
 let displayQuestion = () => {
     if (remainingQuestions.length === 0 || questionCount > TOTAL_QUESTIONS) {
-        localStorage.setItem('lastScore', points);
+        localStorage.setItem('recentScore', points);
 
         return window.location.assign('/quizcomplete.html');
     }
