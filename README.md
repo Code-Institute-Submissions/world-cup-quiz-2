@@ -120,13 +120,15 @@ The 'Hall of Fame' feature that would allow users to save their scores was not f
 
 Extensive use was made of tutorials, walkthroughs and articles and Google searches throughout the project! The material below was most useful:
 
-James Q Quick (YouTube Tutorial) [here] https://www.youtube.com/watch?v=zZdQGs62cR8&t=267s
+James Q Quick (YouTube Tutorial) [here]https://www.youtube.com/watch?v=zZdQGs62cR8&t=267s
 
-Brian Design (YouTube Tutorial) [here] https://www.youtube.com/watch?v=f4fB9Xg2JEY
+Brian Design (YouTube Tutorial) [here]https://www.youtube.com/watch?v=f4fB9Xg2JEY
 
-Codingninjas (Article) [here] https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
+CodeExplained (YouTube Tutorial) [here]https://www.youtube.com/watch?v=49pYIMygIcU&t=1432s
 
-The answers to the questions were obtained from multiple google searches, a useful site for stats (Olympics.com) can be found here [here] https://olympics.com/en/news/fifa-world-cup-2022-records-and-stats
+Codingninjas (Article) [here]https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
+
+The answers to the questions were obtained from multiple google searches, a useful site for stats (Olympics.com) can be found here [here]https://olympics.com/en/news/fifa-world-cup-2022-records-and-stats
 
 
 
