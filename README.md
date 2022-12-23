@@ -82,6 +82,15 @@ Upon completion of the quiz, a final page will be displayed with the results.
 The 'Hall of Fame' feature was not implemented at the time of deployment due to time constraints, this would have allowed the user to save their high scored.
 
 
+# Typography
+
+The font used is the official font of the Qatar World Cup
+
+# Color Scheme
+
+The color used is the official color of the Qatar World Cup (#7F1431)
+
+
 
 # Testing
 
