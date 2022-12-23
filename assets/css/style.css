@@ -258,12 +258,6 @@ input::placeholder {
     text-align: center;
 }
 
-/* #username {
-    margin-bottom: 3rem;
-    width: 100%;
-    outline: gold;
-} */
-
 #quiz-complete-text {
     margin-top: .5rem;
     margin-bottom: 1.5rem;
@@ -271,12 +265,6 @@ input::placeholder {
     color: white;
     text-align: center;
 }
-
-/* #saveButton {
-    border: none
-} */
-
-/* Hall of Fame Styling */
 
 #highScoresList {
     list-style: none;
