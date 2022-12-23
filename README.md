@@ -1,4 +1,5 @@
-![image](https://user-images.githubusercontent.com/112653322/209325979-517a6300-2371-4278-bc3b-8a9ae07536d3.png)
+![image](https://user-images.githubusercontent.com/112653322/209328842-ef3620fe-9fe5-4646-8747-f377a8b6f6f6.png)
+
 
 
 
@@ -15,7 +16,8 @@ The user will find an easy to use interface that is clean, accessible and enjoya
 
 The user is immediately presented with an interactive start button to launch the quiz
 
-![image](https://user-images.githubusercontent.com/112653322/209326290-64b606de-2665-47db-9db8-c7faf5bd4eb5.png)
+
+![image](https://user-images.githubusercontent.com/112653322/209327636-a22bca6b-1693-470d-8b5e-820101e6773f.png)
 
 
 
@@ -23,14 +25,16 @@ The user is immediately presented with an interactive start button to launch the
 
 The quiz contains 10 interesting questions on varying topics related to the World Cup
 
-![image](https://user-images.githubusercontent.com/112653322/209326328-5a2409d5-c545-4add-99a0-4c35ce20ad60.png)
+![image](https://user-images.githubusercontent.com/112653322/209327659-4f6eab0b-62da-4547-9b11-8f88acc8b0e1.png)
+
 
 
 **Answers**
 
 There are 4 possible answers for the user to choose from, the user can simply hover and click on the answer they want to selec.
 
-![image](https://user-images.githubusercontent.com/112653322/209326702-ee1b5be6-49d7-474e-b09b-a6c267b0931a.png)
+![image](https://user-images.githubusercontent.com/112653322/209327726-8370e7b3-edb3-4538-afd7-273a0e22394a.png)
+
 
 
 **Feedback**
@@ -46,28 +50,80 @@ The user will be provided with instant feedback on whether the answer they selec
 
 An overview will be displayed showing what question the user is currently on.
 
-![image](https://user-images.githubusercontent.com/112653322/209326800-b68dd918-3513-451b-9970-b6409b3af6c8.png)
+![image](https://user-images.githubusercontent.com/112653322/209327855-1e2fa32b-c208-408c-aa47-63042ce2ad8d.png)
+
 
 
 **Progress Bar**
 
 A progress bar will be displayed highlighting the user's progression through the quiz.
 
-![image](https://user-images.githubusercontent.com/112653322/209326822-8904e9a2-47a1-472b-b006-c76519df5bb7.png)
+![image](https://user-images.githubusercontent.com/112653322/209327883-888a1bdc-6c85-4cd5-9dc5-591fdcb4582b.png)
 
 
 **Points Tracker**
 
 The user's current points tally will also be displayed on the screen.
 
-![image](https://user-images.githubusercontent.com/112653322/209326970-4b2dcb34-5417-49e9-b94a-5761f7d795de.png)
+![image](https://user-images.githubusercontent.com/112653322/209327923-3d1390b4-2b83-4c5f-a8be-e875ad815247.png)
+
+
 
 
 **Final Results**
 
 Upon completion of the quiz, a final page will be displayed with the results.
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/112653322/209327999-65bf65d1-dcce-449c-955a-d727f12a63f4.png)
+
+
+# Features left to implement
+
+The 'Hall of Fame' feature was not implemented at the time of deployment due to time constraints, this would have allowed the user to save their high scored.
+
+
+
+# Testing
+
+The site was tested across multiple devices and was found to be responsive and behaved as expected.
+
+# Validators
+
+The code for the site was validated on the sites below:
+
+HTML Validation [here]https://validator.w3.org/ : Passed
+CSS Validation [here]https://jigsaw.w3.org/css-validator/#validate_by_input : Passed
+JSHINT Validation [here]https://jshint.com/ : Passed
+
+The site was also tested in Google Chrome Lighthouse, results shown below:
+
+![image](https://user-images.githubusercontent.com/112653322/209329217-81a2ba9e-cc57-497b-80ab-fe5a712ac9c4.png)
+
+
+# Deployment
+
+The site was deployed from Github pages by accessing the 'Settings' tab, then proceeding to the 'Pages' section, then choosing the 'Main' branch to deploy from.
+
+![Deployment](https://user-images.githubusercontent.com/112653322/209329990-131b6594-b761-4f81-9359-627945c09d6a.gif)
+
+
+
+The live site can be found here [here]https://dannygilligan.github.io/world-cup-quiz/ 
+
+
+# Credits
+
+Extensive use was made of tutorials, walkthroughs and articles and Google searches throughout the project! The material below was most useful:
+
+James Q Quick (YouTube Tutorial) [here] https://www.youtube.com/watch?v=zZdQGs62cR8&t=267s
+Brian Design (YouTube Tutorial) [here] https://www.youtube.com/watch?v=f4fB9Xg2JEY
+Codingninjas (Article) [here] https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
+
+
+
+
+
+
 
 
 
